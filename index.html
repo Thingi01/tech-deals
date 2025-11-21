@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell XPS 13 9380 | Ultra-Premium Business Laptop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0066cc;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-portfolio {
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            color: #0066cc;
+            border: 2px solid #0066cc;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-portfolio:hover {
+            background: #0066cc;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            padding: 0.7rem 1.5rem;
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
+        }
+
+        /* HERO */
+        .hero {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 5%;
+            min-height: 90vh;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .hero-content .model {
+            font-size: 1.3rem;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content .brief {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0066cc;
+        }
+
+        .price-label {
+            font-size: 1rem;
+            color: #999;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .extras {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .extra-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            background: #e8f4fd;
+            border-radius: 50px;
+            color: #0066cc;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .extra-badge::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 600px;
+            filter: drop-shadow(0 20px 60px rgba(0,0,0,0.15));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* TRUST BANNER */
+        .trust-banner {
+            padding: 2rem 5%;
+            background: #0066cc;
+            color: white;
+            text-align: center;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .trust-item-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-item-text {
+            font-weight: 600;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #0066cc;
+            box-shadow: 0 10px 30px rgba(0,102,204,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* SPECS */
+        .specs {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+        }
+
+        .specs-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .specs-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .spec-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .spec-text {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            padding: 1rem 2.5rem;
+            background: white;
+            color: #0066cc;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .btn-outline {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 3rem 5%;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* MOBILE MENU */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #0066cc;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 3rem 5%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .trust-items {
+                gap: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .specs-container {
+                padding: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .header-cta {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                padding: 3rem;
+                transition: right 0.3s;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            }
+
+            .header-cta.active {
+                right: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .brief {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .spec-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">TechDeals</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header-cta" id="headerCta">
+            <a href="https://cyrusmainakibe.vercel.app/" target="_blank" class="btn-portfolio">More Laptops</a>
+            <a href="#buy" class="btn-primary">Buy Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dell XPS 13</h1>
+            <div class="model">Model: 9380</div>
+            <p class="brief">Dell XPS 13 ultra-premium laptop for professionals.</p>
+            
+            <div class="price-section">
+                <div class="price">Ksh 56,000</div>
+                <div class="price-label">One-time payment</div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#buy" class="btn-primary btn-large">Order Now</a>
+                <a href="#specs" class="btn-outline btn-large">View Specs</a>
+            </div>
+
+            <div class="extras">
+                <div class="extra-badge">6 MON Warranty</div>
+                <div class="extra-badge">Free Bag</div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/89/0664713/1.jpg?1177" alt="Dell XPS 13 9380">
+        </div>
+    </section>
+
+    <!-- TRUST BANNER -->
+    <section class="trust-banner">
+        <div class="trust-items">
+            <div class="trust-item">
+                <div class="trust-item-icon">🚚</div>
+                <div class="trust-item-text">Free Delivery</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item-icon">🔒</div>
+                <div class="trust-item-text">Secure Payment</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item-icon">✓</div>
+                <div class="trust-item-text">Genuine Products</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-item-icon">📞</div>
+                <div class="trust-item-text">24/7 Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="section-header">
+            <h2>Why Dell XPS 13?</h2>
+            <p>Premium all-round performer with slim design and long battery life</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Powerful Performance</h3>
+                <p>Intel Core i7 8th Gen processor delivers exceptional speed for multitasking, creative work, and business applications.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>Premium Design</h3>
+                <p>Ultra-slim, lightweight aluminum chassis with InfinityEdge display. Professional aesthetics that command attention.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔋</div>
+                <h3>All-Day Battery</h3>
+                <p>Work unplugged all day with exceptional battery life. Perfect for professionals on the move.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3>Stunning Display</h3>
+                <p>13-inch Full HD display with vibrant colors and sharp details. Perfect for presentations and creative work.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Business Ready</h3>
+                <p>Windows 11 Pro with enterprise-grade security features. Built for professionals who demand reliability.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Fast Storage</h3>
+                <p>256GB SSD ensures lightning-fast boot times and application launches. No more waiting around.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="specs" id="specs">
+        <div class="section-header">
+            <h2>Technical Specifications</h2>
+            <p>Everything you need in a premium business laptop</p>
+        </div>
+
+        <div class="specs-container">
+            <div class="specs-list">
+                <div class="spec-item">
+                    <div class="spec-icon">🖥️</div>
+                    <div class="spec-text">Intel Core i7 8th Gen Processor</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">💾</div>
+                    <div class="spec-text">16GB RAM</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">💿</div>
+                    <div class="spec-text">256 GB SSD</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">📺</div>
+                    <div class="spec-text">13-inch Full HD Display</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🪟</div>
+                    <div class="spec-text">Windows 11 Pro</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="buy">
+        <h2>Ready to Upgrade Your Productivity?</h2>
+        <p>Get the Dell XPS 13 9380 today with 6 months warranty and a free laptop bag</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/254700000000?text=Hi!%20I'm%20interested%20in%20the%20Dell%20XPS%2013%209380" class="btn-white">Contact Us on WhatsApp</a>
+            <a href="https://cyrusmainakibe.vercel.app/" target="_blank" class="btn-outline">Browse More Laptops</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 TechDeals — Premium Laptop Marketplace</p>
+        <div class="footer-links">
+            <a href="https://cyrusmainakibe.vercel.app/" target="_blank">All Laptops</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('headerCta').classList.toggle('active');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('headerCta').classList.remove('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('headerCta');
+            const toggle = document.querySelector('.menu-toggle');
+            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
